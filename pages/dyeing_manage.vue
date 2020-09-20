@@ -1,5 +1,5 @@
 <template>
-    <main-app>
+    <div>
         <anchoredhead :level="1">Hello world!</anchoredhead>
         <button v-on:click="counter += 1">Add 1</button>
         <p>The button has been clicked {{ counter }} times</p>
@@ -23,7 +23,8 @@
         <button @click="drawer = true" >点我打开</button>
         <el-drawer
                 :visible.sync="drawer"
-                :direction="direction">
+                :direction="direction"
+                :show-close="false">
             <div class="drawer-entrance">
                 <div class="title">染色入口:</div>
                 <input v-model="dyeing.entrance" placeholder=""/>
@@ -40,20 +41,20 @@
                 <button @click="handleAdd">确定</button>
             </div>
         </el-drawer>
-    </main-app>
+    </div>
 </template>
 
 <script>
     import anchoredhead from '../components/dyhead.vue'
     import ContactInfo from '../components/contact.vue'
-    import MainApp from '../src/App.vue'
+    // import MainApp from '../src/App.vue'
 
     export default {
         name: 'dyeing-manage',
         components: {
             anchoredhead,
             ContactInfo,
-            MainApp,
+            // MainApp,
         },
         data : function () {
             return {

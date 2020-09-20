@@ -1,17 +1,17 @@
 <template>
-    <main-app>
+    <div>
         <p>welcome entrance</p>
-    </main-app>
+    </div>
 
 </template>
 
 <script>
-    import MainApp from '../src/App.vue'
+    // import MainApp from '../src/App.vue'
 
     export default {
         name: 'search',
         components: {
-            MainApp
+           //  MainApp
         },
     }
 </script>
